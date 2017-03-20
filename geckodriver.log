@@ -1,0 +1,147 @@
+1489939748261	geckodriver	INFO	Listening on 127.0.0.1:29368
+1489939750335	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.FDBb0Iyi8sai
+1489939750340	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489939750353	geckodriver::marionette	INFO	Connecting to Marionette on localhost:29375
+1489939751301	Marionette	INFO	Listening on port 29375
+JavaScript error: resource://gre/components/nsUrlClassifierListManager.js, line 522: TypeError: this.tablesData[table] is undefined
+1489940039534	geckodriver	INFO	Listening on 127.0.0.1:29423
+1489940041612	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.xFPuIUQZbIB8
+1489940041617	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489940041624	geckodriver::marionette	INFO	Connecting to Marionette on localhost:29429
+1489940042164	Marionette	INFO	Listening on port 29429
+[Child 3972] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1489940089767	geckodriver	INFO	Listening on 127.0.0.1:29489
+1489940091833	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.RHFNe5T3PhTe
+1489940091839	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489940091846	geckodriver::marionette	INFO	Connecting to Marionette on localhost:29495
+1489940092383	Marionette	INFO	Listening on port 29495
+[Child 15196] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 15196] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1489940113363	geckodriver	INFO	Listening on 127.0.0.1:29542
+1489940115430	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.XmY0hkUYGkn9
+1489940115436	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489940115442	geckodriver::marionette	INFO	Connecting to Marionette on localhost:29548
+1489940115997	Marionette	INFO	Listening on port 29548
+[Child 10536] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 10536] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+Connecting to Marionette on localhost:29601
+1489940156611	Marionette	INFO	Listening on port 29601
+[Child 13056] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 13056] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1489940198885	geckodriver	INFO	Listening on 127.0.0.1:29652
+1489940200958	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.MCV6a2q1d8Qj
+1489940200966	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489940200972	geckodriver::marionette	INFO	Connecting to Marionette on localhost:29658
+1489940201529	Marionette	INFO	Listening on port 29658
+[Child 11840] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+.SgiI2ZkFssLk
+1489940273671	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489940273677	geckodriver::marionette	INFO	Connecting to Marionette on localhost:29734
+1489940274218	Marionette	INFO	Listening on port 29734
+[Child 5800] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x4A00C3,name=PContent::Msg_ConsoleMessage) Channel closing: too late to send/recv, messages will be lost
+
+nette	INFO	Connecting to Marionette on localhost:29812
+1489940341953	Marionette	INFO	Listening on port 29812
+[Child 11964] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11964] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1489940426336	geckodriver	INFO	Listening on 127.0.0.1:29883
+1489940428401	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.bZYLw1OQ9Pa0
+1489940428406	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489940428412	geckodriver::marionette	INFO	Connecting to Marionette on localhost:29889
+1489940429126	Marionette	INFO	Listening on port 29889
+[Child 11120] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1489978672353	geckodriver	INFO	Listening on 127.0.0.1:31971
+1489978674483	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.9raWky6w0ODi
+1489978674517	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489978674532	geckodriver::marionette	INFO	Connecting to Marionette on localhost:31977
+1489978675828	Marionette	INFO	Listening on port 31977
+[Child 11472] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 11472] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1489978705580	geckodriver	INFO	Listening on 127.0.0.1:32060
+1489978707684	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.UuasAyMvAfkf
+1489978707684	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489978707702	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32066
+1489978708370	Marionette	INFO	Listening on port 32066
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+kodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489978900217	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32206
+1489978900801	Marionette	INFO	Listening on port 32206
+[Child 8888] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 8888] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1489978925716	geckodriver	INFO	Listening on 127.0.0.1:32303
+1489978927784	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.PY9S2QCVbu6e
+1489978927789	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489978927796	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32309
+1489978928366	Marionette	INFO	Listening on port 32309
+[Child 5368] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 5368] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1489978952123	geckodriver	INFO	Listening on 127.0.0.1:32412
+1489978954165	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.6NytBgTKbYkr
+1489978954170	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489978954175	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32418
+1489978954718	Marionette	INFO	Listening on port 32418
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+SNOd8ubF
+1489979392682	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489979392689	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32783
+1489979393329	Marionette	INFO	Listening on port 32783
+[Child 228] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 228] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1489979541551	geckodriver	INFO	Listening on 127.0.0.1:32920
+1489979543584	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.2M05eX8B2NAV
+1489979543590	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489979543596	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32926
+1489979544191	Marionette	INFO	Listening on port 32926
+[Child 10248] WARNING: pipe error: 109: file c:/builds/moz2_slave/m-rel-w32-00000000000000000000/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1489979587168	geckodriver	INFO	Listening on 127.0.0.1:33016
+1489979589242	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.uZLQcD1waA8d
+1489979589249	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489979589255	geckodriver::marionette	INFO	Connecting to Marionette on localhost:33022
+1489979589795	Marionette	INFO	Listening on port 33022
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+1489980431269	geckodriver	INFO	Listening on 127.0.0.1:33668
+1489980433336	mozprofile::profile	INFO	Using profile path C:\Users\Roshan\AppData\Local\Temp\rust_mozprofile.FUs3Q2h3Z4yQ
+1489980433342	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489980433348	geckodriver::marionette	INFO	Connecting to Marionette on localhost:33676
+1489980433938	Marionette	INFO	Listening on port 33676
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+kodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489980619049	geckodriver::marionette	INFO	Connecting to Marionette on localhost:33793
+1489980619598	Marionette	INFO	Listening on port 33793
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
+kodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1489980649259	geckodriver::marionette	INFO	Connecting to Marionette on localhost:33846
+1489980649801	Marionette	INFO	Listening on port 33846
+*************************
+A coding exception was thrown and uncaught in a Task.
+
+Full message: TypeError: NetworkError when attempting to fetch resource.
+Full stack: 
+*************************
