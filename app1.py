@@ -3,8 +3,9 @@ from selenium.common.exceptions import WebDriverException, NoSuchElementExceptio
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import config
 import time
+import pandas as pd
+from io_my import CSVWriter
 from bs4 import BeautifulSoup
-import bs4
 from io_my import FileHandler
 
 driver = None
@@ -56,10 +57,31 @@ def waitTillLoad(element, method='id'):
         except NoSuchElementException:
             time.sleep(1)
 
+# def waitTillLoad(element, method='id'):
+#     """
+#     Wait till loading a particular element
+#     :param delay: Number of seconds to delay
+#     :param element:
+#     :return:
+#     """
+#
+#     global driver
+#     count = 0
+#     max_count = 10
+#     while count < max_count:
+#         try:
+#             if method == 'id':
+#                 driver.find_element_by_id(element)
+#             elif method == 'xpath':
+#                 driver.find_element_by_xpath(element)
+#             return True
+#         except NoSuchElementException:
+#             time.sleep(1)
+#             count += 1
+#     return False
+
 
 def communicationDetails(ul):
-    print("Communication Details")
-    print("---------------------")
     data = {}
     li_list = ul.findAll(name='li', attrs={'class': 'last noDispl'})
     for li in li_list:
@@ -68,13 +90,11 @@ def communicationDetails(ul):
             tr_list = table.findAll(name='tr')
             for tr in tr_list:
                 td_list = tr.findAll(name='td')
-                data[td_list[0].text] = td_list[1].text
+                data[td_list[0].text] = td_list[1].text.replace(",", "?")
     return data
 
 
 def addressDetails(ul):
-    print("Address details")
-    print("---------------")
     data = {}
     li_list = ul.findAll(name='li', attrs={'class': 'last noDispl'})
     for li in li_list:
@@ -83,13 +103,11 @@ def addressDetails(ul):
             tr_list = table.findAll(name='tr')
             for tr in tr_list:
                 td_list = tr.findAll(name='td')
-                data[td_list[0].text] = td_list[1].text
+                data[td_list[0].text] = td_list[1].text.replace(",", "?")
     return data
 
 
 def registerInformation(ul):
-    print("Register Information")
-    print("--------------------")
     data = {}
     li_list = ul.findAll(name='li', attrs={'class': 'last noDispl'})
     for li in li_list:
@@ -99,13 +117,11 @@ def registerInformation(ul):
             for tr in tr_list:
                 td_list = tr.findAll(name='td')
                 if td_list[0].text=='Rechtsform (kurz)':
-                    data[td_list[0].text] = td_list[1].text
+                    data[td_list[0].text] = td_list[1].text.replace(",", "?")
     return data
 
 
 def branchDetails(ul):
-    print("Branch Details")
-    print("--------------")
     data = {}
     li_list = ul.findAll(name='li', attrs={'class': 'last noDispl'})
     for li in li_list:
@@ -115,14 +131,11 @@ def branchDetails(ul):
             for tr in tr_list:
                 td_list = tr.findAll(name='td')
                 if td_list[0].text == 'Hauptbranche WZ 2008':
-                    data[td_list[0].text] = td_list[1].text
+                    data[td_list[0].text] = td_list[1].text.replace(",", "?")
     return data
 
 
 def managementDetails(ul):
-    print("Management Details")
-    print("------------------")
-
     li_list = ul.findAll(name='li', attrs={'class': 'last noDispl'})
     top_management_str = ""
     for li in li_list:
@@ -145,12 +158,22 @@ def managementDetails(ul):
                         top_management_str += text
                     else:
                         terminate = True
-                        continuegit
+                        continue
                     top_management_str += '|'
                 top_management_str += '!'
 
                 if terminate and len(td_list) == 1:
                     break
+
+    top_management_str = top_management_str.replace(",", "?")
+    if top_management_str.startswith("!!"):
+        top_management_str = top_management_str[2:]
+
+    if top_management_str.endswith("!!"):
+        top_management_str = top_management_str[:-2]
+    elif top_management_str.endswith("!"):
+        top_management_str = top_management_str[:-1]
+
     data = {'Top-Management': top_management_str}
     return data
 
@@ -183,12 +206,33 @@ def login():
     # Wait till load the page
     waitTillLoad('listenNavigation')
 
-    # Company list
-    for company in company_list:
-        driver.get(company)
-        waitTillLoad(element='//*[@id="useQuckSearch"]/h3', method='xpath')
-        soup = BeautifulSoup(driver.page_source, "lxml")
+    count = 0
+    company_file = CSVWriter('data.csv')
 
+    for company in company_list[count:]:
+        while True:
+            try:
+                driver.get(company)
+                break
+            except WebDriverException:
+                time.sleep(1)
+
+        communication_data = {}
+        address_data = {}
+        register_data = {}
+        branch_data = {}
+        management_data = {}
+
+        # error_log = FileHandler('error')
+        #
+        # load = waitTillLoad(element='//*[@id="bigLeftBox1"]/div[3]/ul[1]/li[2]/h5', method='xpath')
+        #
+        # if not load:
+        #     error_log.append(company)
+        #     print('\x1b[6;30;42m' + company + '\x1b[0m')
+        #     continue
+        waitTillLoad(element='//*[@id="bigLeftBox1"]/div[3]/ul[1]/li[2]/h5', method='xpath')
+        soup = BeautifulSoup(driver.page_source, "lxml")
         ul_list = soup.findAll(name='ul', attrs={'class': 'tableLists'})
         for ul in ul_list:
             li_list = ul.findAll(name='li', attrs={'class': 'middle'})
@@ -212,8 +256,10 @@ def login():
         data_map.update(register_data)
         data_map.update(branch_data)
         data_map.update(management_data)
-        print(data_map)
-        break
+
+        print(count)
+        count += 1
+        company_file.append(data_map)
 
 
 def loadCompanyList():
