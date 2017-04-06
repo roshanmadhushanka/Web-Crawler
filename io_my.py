@@ -79,7 +79,7 @@ class CSVWriter:
         _file = None
         try:
             _file = open(self._file_name, 'w', encoding='utf-8')
-            _file.write("'Internationale Vorwahl', 'Telefon', 'Telefax', 'Email', 'Internet', 'Bankverbindung', 'Straße-Adresse', 'Hausnummer', 'PLZ', 'Ort', 'Regierungsbezirk', 'Bundesland', 'Land', 'Zusätzl. Informationen', 'Rechtsform (kurz)', 'Hauptbranche WZ 2008', 'Top-Management'\n")
+            _file.write("'Company Name', 'Internationale Vorwahl', 'Telefon', 'Telefax', 'Email', 'Internet', 'Bankverbindung', 'Straße-Adresse', 'Hausnummer', 'PLZ', 'Ort', 'Regierungsbezirk', 'Bundesland', 'Land', 'Zusätzl. Informationen', 'Rechtsform (kurz)', 'Hauptbranche WZ 2008', 'Top-Management'\n")
         except IOError:
             pass
         finally:
@@ -96,7 +96,7 @@ class CSVWriter:
         if not isinstance(content, dict):
             return
 
-        data = {'Internationale Vorwahl': 'N/A', 'Telefon': 'N/A', 'Telefax': 'N/A', 'Email': ' N/A',
+        data = {'Company Name': 'N/A', 'Internationale Vorwahl': 'N/A', 'Telefon': 'N/A', 'Telefax': 'N/A', 'Email': ' N/A',
                 'Internet': 'N/A', 'Bankverbindung': 'N/A', 'Straße-Adresse': 'N/A', 'Hausnummer': 'N/A',
                 'PLZ': 'N/A', 'Ort': 'N/A', 'Regierungsbezirk': 'N/A', 'Bundesland': 'N/A', 'Land': 'N/A',
                 'Zusätzl. Informationen': 'N/A', 'Rechtsform (kurz)': 'N/A', 'Hauptbranche WZ 2008': 'N/A',

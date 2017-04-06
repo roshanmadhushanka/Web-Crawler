@@ -38,25 +38,6 @@ def loadDriver():
         return False
 
 
-def waitTillLoad(element, method='id'):
-    """
-    Wait till loading a particular element
-    :param delay: Number of seconds to delay
-    :param element:
-    :return:
-    """
-    global driver
-
-    while True:
-        try:
-            if method == 'id':
-                driver.find_element_by_id(element)
-            elif method == 'xpath':
-                driver.find_element_by_xpath(element)
-            break
-        except NoSuchElementException:
-            time.sleep(1)
-
 # def waitTillLoad(element, method='id'):
 #     """
 #     Wait till loading a particular element
@@ -64,21 +45,40 @@ def waitTillLoad(element, method='id'):
 #     :param element:
 #     :return:
 #     """
-#
 #     global driver
-#     count = 0
-#     max_count = 10
-#     while count < max_count:
+#
+#     while True:
 #         try:
 #             if method == 'id':
 #                 driver.find_element_by_id(element)
 #             elif method == 'xpath':
 #                 driver.find_element_by_xpath(element)
-#             return True
+#             break
 #         except NoSuchElementException:
 #             time.sleep(1)
-#             count += 1
-#     return False
+
+def waitTillLoad(element, method='id'):
+    """
+    Wait till loading a particular element
+    :param delay: Number of seconds to delay
+    :param element:
+    :return:
+    """
+
+    global driver
+    count = 0
+    max_count = 20
+    while count < max_count:
+        try:
+            if method == 'id':
+                driver.find_element_by_id(element)
+            elif method == 'xpath':
+                driver.find_element_by_xpath(element)
+            return True
+        except NoSuchElementException:
+            time.sleep(1)
+            count += 1
+    return False
 
 
 def communicationDetails(ul):
@@ -206,7 +206,7 @@ def login():
     # Wait till load the page
     waitTillLoad('listenNavigation')
 
-    count = 0
+    count = 2250
     company_file = CSVWriter('data.csv')
 
     for company in company_list[count:]:
@@ -215,6 +215,7 @@ def login():
                 driver.get(company)
                 break
             except WebDriverException:
+                print("Except")
                 time.sleep(1)
 
         communication_data = {}
@@ -223,16 +224,25 @@ def login():
         branch_data = {}
         management_data = {}
 
-        # error_log = FileHandler('error')
-        #
-        # load = waitTillLoad(element='//*[@id="bigLeftBox1"]/div[3]/ul[1]/li[2]/h5', method='xpath')
-        #
-        # if not load:
-        #     error_log.append(company)
-        #     print('\x1b[6;30;42m' + company + '\x1b[0m')
-        #     continue
-        waitTillLoad(element='//*[@id="bigLeftBox1"]/div[3]/ul[1]/li[2]/h5', method='xpath')
+        #Wait specific time method
+        error_log = FileHandler('error')
+
+        load = waitTillLoad(element='//*[@id="bigLeftBox1"]/div[3]/ul[1]/li[2]/h5', method='xpath')
+
+        if not load:
+            error_log.append(company)
+            print('\x1b[6;30;42m' + company + '\x1b[0m')
+            continue
+
+        # Wait forever method
+        # waitTillLoad(element='//*[@id="bigLeftBox1"]/div[3]/ul[1]/li[2]/h5', method='xpath')
+
         soup = BeautifulSoup(driver.page_source, "lxml")
+        h1_list = soup.findAll(name='h1', attrs={'class': 'fLeft text50 bold'})
+        company_name = ""
+        for h1 in h1_list:
+            company_name = h1.text
+
         ul_list = soup.findAll(name='ul', attrs={'class': 'tableLists'})
         for ul in ul_list:
             li_list = ul.findAll(name='li', attrs={'class': 'middle'})
@@ -250,7 +260,7 @@ def login():
                     elif 'Management' in h5.text:
                         management_data = managementDetails(ul)
 
-        data_map = {}
+        data_map = {'Company Name': company_name}
         data_map.update(communication_data)
         data_map.update(address_data)
         data_map.update(register_data)
