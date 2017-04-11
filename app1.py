@@ -206,7 +206,7 @@ def login():
     # Wait till load the page
     waitTillLoad('listenNavigation')
 
-    count = 2250
+    count = 25
     company_file = CSVWriter('data.csv')
 
     for company in company_list[count:]:
@@ -242,6 +242,7 @@ def login():
         company_name = ""
         for h1 in h1_list:
             company_name = h1.text
+        company_name = company_name.replace(",", "?")
 
         ul_list = soup.findAll(name='ul', attrs={'class': 'tableLists'})
         for ul in ul_list:
